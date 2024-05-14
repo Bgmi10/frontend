@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import SignUp from './components/Signup';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import store from './utils/store';
+import Admindashboard from './components/DashBoard/Admindashboard';
+import { Provider } from 'react-redux';
+import { Notfound } from './components/Notfound';
+import {Empdashboard} from './components/Empdashboard/Empdashboard'
+import  {Home} from './components/Homepage/Home';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className='p-0 m-0 '>
+        <Router>
+          <Routes>
+            <Route path='/login' element={<SignUp />} />
+            <Route path='/home' element={<Home />} />
+         
+            <Route path="/dashboard/admin" element={<Admindashboard />} />
+            <Route path="/dashboard/user" element={< Empdashboard />} />
+            {/* <Route path="*" element={<Notfound />} /> */}
+          </Routes>
+        </Router>
+      </div>
+    </Provider>
   );
 }
 

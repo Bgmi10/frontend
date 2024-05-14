@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+Authentication and Authorization: Secure your backend API endpoint to ensure that only authenticated administrators can create tasks. Implement authorization checks to verify that the user creating the task has the necessary permissions to do so.
+
+
+
+
+we need two login page one is for user and another one is for admin 
